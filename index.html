@@ -277,11 +277,28 @@ footer{border-top:1px solid var(--border);padding:60px 0 32px}
 </style>
 </head>
 <body>
+<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+<script>
+Paddle.Setup({ 
+  token: 'live_7cd60cc676ac86dbbd9a68e94a1',
+  eventCallback: function(data) {
+    if (data.name === 'checkout.completed') {
+      window.location.href = '/thank-you';
+    }
+  }
+});
+
+function openCheckout(priceId) {
+  Paddle.Checkout.open({
+    items: [{ priceId: priceId, quantity: 1 }]
+  });
+}
+</script>
 
 <!-- TOP BAR -->
 <div class="topbar">
   🇬🇧 Exclusive UK offer — First 14 days completely free. No commitment.
-  <a href="https://clinicflowreal.lemonsqueezy.com/checkout/buy/a11da394-9214-45ad-af05-9fbb963fb87d">Claim your spot →</a>
+  <a href="#" onclick="openCheckout('pri_01kjmpxe7ems8xmm90qygm2886');return false;">Claim your spot →</a>
 </div>
 
 <!-- NAV -->
@@ -303,7 +320,7 @@ footer{border-top:1px solid var(--border);padding:60px 0 32px}
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a class="em-link" href="#">Contact</a></li>
-        <li><a href="https://clinicflowreal.lemonsqueezy.com/checkout/buy/a11da394-9214-45ad-af05-9fbb963fb87d" class="nav-cta">Start free trial</a></li>
+        <li><a href="#" onclick="openCheckout('pri_01kjmpxe7ems8xmm90qygm2886');return false;" class="nav-cta">Start free trial</a></li>
       </ul>
     </div>
   </div>
@@ -322,7 +339,7 @@ footer{border-top:1px solid var(--border);padding:60px 0 32px}
       Send us your weekly patient list. We automatically send SMS &amp; email reminders 24h before every appointment. <strong style="color:var(--navy)">No software. No setup. No effort.</strong> Just £49/month — first 14 days completely free.
     </p>
     <div class="hero-btns">
-      <a href="https://clinicflowreal.lemonsqueezy.com/checkout/buy/a11da394-9214-45ad-af05-9fbb963fb87d" class="btn-main">Start my free trial →</a>
+      <a href="#" onclick="openCheckout('pri_01kjmpxe7ems8xmm90qygm2886');return false;" class="btn-main">Start my free trial →</a>
     </div>
     <div class="hero-trust">
       <span>🇬🇧 Built for UK practitioners</span>
@@ -373,7 +390,7 @@ footer{border-top:1px solid var(--border);padding:60px 0 32px}
         <p class="eyebrow">The real cost of no-shows</p>
         <h2 class="section-h2">Every empty slot is money you'll never get back.</h2>
         <p class="section-desc" style="margin-bottom:32px">Most doctors don't track it. When they do, they're shocked. The average solo practitioner loses £400–£600 every single month to missed appointments. That's £7,200 a year.</p>
-        <a href="https://clinicflowreal.lemonsqueezy.com/checkout/buy/a11da394-9214-45ad-af05-9fbb963fb87d" class="btn-main" style="display:inline-flex">Fix this for £49/month →</a>
+        <a href="#" onclick="openCheckout('pri_01kjmpxe7ems8xmm90qygm2886');return false;" class="btn-main" style="display:inline-flex">Fix this for £49/month →</a>
       </div>
       <div class="prob-cards">
         <div class="prob-card red"><span class="prob-icon">😤</span><div class="prob-num red-txt">4–5</div><div class="prob-label">No-shows per week on average</div></div>
@@ -505,7 +522,7 @@ footer{border-top:1px solid var(--border);padding:60px 0 32px}
           <li class="off">Analytics dashboard</li>
           <li class="off">Priority support</li>
         </ul>
-        <a href="https://clinicflowreal.lemonsqueezy.com/checkout/buy/a11da394-9214-45ad-af05-9fbb963fb87d" class="btn-price btn-price-outline" target="_blank">Start free trial</a>
+        <a href="#" onclick="openCheckout('pri_01kjmpxe7ems8xmm90qygm2886');return false;" class="btn-price btn-price-outline" target="_blank">Start free trial</a>
         <p class="price-note"><strong>14 days free</strong> · card required</p>
       </div>
       <div class="price-card price-featured">
@@ -524,7 +541,7 @@ footer{border-top:1px solid var(--border);padding:60px 0 32px}
           <li>Analytics dashboard</li>
           <li>Priority support</li>
         </ul>
-        <a href="https://clinicflowreal.lemonsqueezy.com/checkout/buy/14242955-44d0-4e72-9b54-d5ef90d4cb3a" class="btn-price btn-price-white" target="_blank">Start free trial</a>
+        <a href="#" onclick="openCheckout('pri_01kjmpskf75wmnr52rfk5x9a1c');return false;" class="btn-price btn-price-white" target="_blank">Start free trial</a>
         <p class="price-note"><strong>14 days free</strong> · card required</p>
       </div>
       <div class="price-card">
@@ -542,7 +559,7 @@ footer{border-top:1px solid var(--border);padding:60px 0 32px}
           <li>Dedicated account manager</li>
           <li>Priority support</li>
         </ul>
-        <a href="https://clinicflowreal.lemonsqueezy.com/checkout/buy/8161fe5c-4baa-4ad2-8d3e-db16f1bd578d" class="btn-price btn-price-outline" target="_blank">Start free trial</a>
+        <a href="#" onclick="openCheckout('pri_01kjmpp2geer1q6mjr4ghf42a5');return false;" class="btn-price btn-price-outline" target="_blank">Start free trial</a>
         <p class="price-note"><strong>14 days free</strong> · card required</p>
       </div>
     </div>
@@ -619,8 +636,8 @@ footer{border-top:1px solid var(--border);padding:60px 0 32px}
 <div class="container">
   <div class="cta-banner">
     <h2>Ready to stop losing patients?</h2>
-    <p>Join healthcare professionals worldwide who recovered their revenue with ClinicFlow. First 14 days free.</p>
-    <a href="https://clinicflowreal.lemonsqueezy.com/checkout/buy/a11da394-9214-45ad-af05-9fbb963fb87d" class="btn-main" style="display:inline-flex">Start your free trial today →</a>
+    <p>Join UK healthcare professionals who recovered their revenue with ClinicFlow. First 14 days free.</p>
+    <a href="#" onclick="openCheckout('pri_01kjmpxe7ems8xmm90qygm2886');return false;" class="btn-main" style="display:inline-flex">Start your free trial today →</a>
   </div>
 </div>
 
@@ -670,15 +687,15 @@ footer{border-top:1px solid var(--border);padding:60px 0 32px}
       <div>
         <p class="footer-col-h">Legal</p>
         <ul class="footer-links">
-          <li><a onclick="document.getElementById('m-privacy').classList.add('active')">Privacy Policy</a></li>
-          <li><a onclick="document.getElementById('m-terms').classList.add('active')">Terms of Service</a></li>
-          <li><a onclick="document.getElementById('m-refund').classList.add('active')">Refund Policy</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/refund">Refund Policy</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 ClinicFlow. All rights reserved.</p>
-      <p>Built for healthcare professionals worldwide 🌍</p>
+      <p>Built for UK healthcare professionals 🇬🇧</p>
     </div>
   </div>
 </footer>
@@ -701,13 +718,15 @@ footer{border-top:1px solid var(--border);padding:60px 0 32px}
 <div class="modal-overlay" id="m-terms">
   <div class="modal">
     <button class="modal-close" onclick="document.getElementById('m-terms').classList.remove('active')">✕</button>
-    <h2>Terms of Service</h2><p class="modal-date">Last updated: February 2026</p>
+    <h2>Terms of Service</h2><p class="modal-date">Last updated: 1 March 2026</p>
     <div class="modal-content">
-      <h3>Service</h3>ClinicFlow provides appointment reminder services via SMS and email for medical clinics.
-      <h3>Your responsibilities</h3>You must ensure patient consent to receive SMS/email communications and provide accurate scheduling information.
-      <h3>Billing</h3>Monthly subscriptions. Cancel anytime. Free trial requires no payment information.
-      <h3>Liability</h3>ClinicFlow is not responsible for missed appointments due to incorrect phone numbers or network failures.
-      <h3>Contact</h3><span class="em-text"></span>
+      <h3>1. About joinclinicflow</h3>These Terms govern your use of the appointment reminder service provided by <strong>joinclinicflow</strong>, trading as ClinicFlow. Full terms available at www.joinclinicflow.org/terms.
+      <h3>2. The Service</h3>joinclinicflow provides a human-driven appointment reminder service. A real person manages your schedule and oversees delivery of all SMS and email reminders on your behalf.
+      <h3>3. Free Trial</h3>New subscribers receive a 14-day free trial. After 14 days, your subscription renews automatically at the applicable monthly rate unless cancelled.
+      <h3>4. Billing</h3>Solo £49/month · Practice £89/month · Clinic £149/month. Payments processed securely through Paddle. Cancel anytime by emailing joinclinicflow@gmail.com.
+      <h3>5. Refund Policy</h3>All purchases are eligible for a full refund within 30 days of the original purchase date, no questions asked.
+      <h3>6. GDPR</h3>joinclinicflow acts as Data Processor. Patient data used solely to send reminders. Never sold or shared. Deleted within 14 days of cancellation. UK GDPR compliant.
+      <h3>7. Contact joinclinicflow</h3>joinclinicflow@gmail.com · www.joinclinicflow.org/terms
     </div>
   </div>
 </div>
@@ -715,12 +734,12 @@ footer{border-top:1px solid var(--border);padding:60px 0 32px}
 <div class="modal-overlay" id="m-refund">
   <div class="modal">
     <button class="modal-close" onclick="document.getElementById('m-refund').classList.remove('active')">✕</button>
-    <h2>Refund Policy</h2><p class="modal-date">Last updated: February 2026</p>
+    <h2>Refund Policy</h2><p class="modal-date">Last updated: 1 March 2026</p>
     <div class="modal-content">
-      <h3>14-day guarantee</h3>Not satisfied within the first 14 days? Full refund, no questions asked.
-      <h3>How to request</h3>Email us with your account details. Processed within 5 business days.
-      <h3>After 14 days</h3>Non-refundable after 14 days. Cancel anytime to stop future charges.
-      <h3>Free trial</h3>Your 14-day trial requires no credit card. Only charged if you choose to subscribe.
+      <h3>30-day refund guarantee</h3>All purchases are eligible for a full refund within 30 days of the original purchase date, no questions asked.
+      <h3>How to request</h3>Email joinclinicflow@gmail.com with your order details. Refunds processed within 5-10 business days.
+      <h3>Free trial</h3>Your 14-day free trial starts automatically. You will not be charged until the trial ends.
+      <h3>Cancellation</h3>Cancel anytime by emailing joinclinicflow@gmail.com. No penalties. No hidden fees.
     </div>
   </div>
 </div>
